@@ -1,7 +1,61 @@
-@import "theme/child_theme_variables";                   // <------- Add your variables into this file. Also add variables to overwrite Bootstrap variables here
-@import "assets/bootstrap5/bootstrap";                             // <------- Loads Bootstrap4
-@import "assets/understrap/theme/understrap";  // <------- Loads the Understrap defaults. Just a few classes to incorporate BS in WP
-@import "assets/understrap/theme/woocommerce"; // <------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc) // <------- Loads Bootstrap5
+@import "assets/bootstrap5/functions";
+
+// 2. Include any default variable overrides here
+// ! @see https: //getbootstrap.com/docs/5.2/customize/sass/#importing
+@import "theme/child_theme_variables"; // <------- Add your variables into this file. Also add variables to overwrite Bootstrap variables here
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "assets/bootstrap5/variables";
+
+// 4. Include any default map overrides here
+$theme-colors: map-remove($theme-colors, $custom-colors);
+
+// 5. Include remainder of required parts
+@import "assets/bootstrap5/maps";
+@import "assets/bootstrap5/mixins";
+@import "assets/bootstrap5/root";
+
+// 6. Optionally include any other parts as needed
+@import "assets/bootstrap5/utilities";
+@import "assets/bootstrap5/reboot";
+@import "assets/bootstrap5/type";
+@import "assets/bootstrap5/images";
+@import "assets/bootstrap5/containers";
+@import "assets/bootstrap5/grid";
+@import "assets/bootstrap5/tables";
+@import "assets/bootstrap5/forms";
+@import "assets/bootstrap5/buttons";
+@import "assets/bootstrap5/transitions";
+@import "assets/bootstrap5/dropdown";
+@import "assets/bootstrap5/button-group";
+@import "assets/bootstrap5/nav";
+@import "assets/bootstrap5/navbar";
+@import "assets/bootstrap5/card";
+@import "assets/bootstrap5/accordion";
+@import "assets/bootstrap5/breadcrumb";
+@import "assets/bootstrap5/pagination";
+@import "assets/bootstrap5/badge";
+@import "assets/bootstrap5/alert";
+@import "assets/bootstrap5/progress";
+@import "assets/bootstrap5/list-group";
+@import "assets/bootstrap5/close";
+@import "assets/bootstrap5/toasts";
+@import "assets/bootstrap5/modal";
+@import "assets/bootstrap5/tooltip";
+@import "assets/bootstrap5/popover";
+@import "assets/bootstrap5/carousel";
+@import "assets/bootstrap5/spinners";
+@import "assets/bootstrap5/offcanvas";
+@import "assets/bootstrap5/placeholders";
+@import "assets/bootstrap5/helpers";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "assets/bootstrap5/utilities/api";
+
+// 8. Add additional custom code here
+@import "assets/understrap/theme/understrap";           // <------- Loads the Understrap defaults. Just a few classes to incorporate BS in WP
+//@import "assets/understrap/theme/woocommerce";           // <------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
 
 // Optional files - If you don´t use the corresponding scripts/fonts comment em out
 @import "assets/fontawesome/font-awesome";                           // <------- Font Awesome Icon font
@@ -10,5 +64,5 @@
 // Any additional imported files //
 @import "theme/child_theme";                             // <------- Add your styles into this file
 @import "assets/understrap/theme/colors";           // <-------- This creates the necessary bootstrap color classes.
-@import "assets/understrap/theme/blocks";           // <-------- This adds Bootstrap styles to blocks.
-@import "assets/understrap/theme/contact-form7";    // <-------- Contact Form 7 - Bootstrap 4 support
+//@import "assets/understrap/theme/blocks";           // <-------- This adds Bootstrap styles to blocks.
+//@import "assets/understrap/theme/contact-form7";    // <-------- Contact Form 7 - Bootstrap 4 support

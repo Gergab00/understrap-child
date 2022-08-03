@@ -1,6 +1,6 @@
   // Tables
 .wp-block-table table {
-	@extend .table;
+	@extend .table !optional;
 	@extend .table-bordered;
 }
 
