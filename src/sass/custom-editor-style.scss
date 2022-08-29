@@ -11,6 +11,7 @@
 @import "assets/bootstrap5/variables";
 
 // 4. Include any default map overrides here
+$theme-colors: map-merge($theme-colors, $custom-colors);
 
 // 5. Include remainder of required parts
 @import "assets/bootstrap5/maps";
@@ -52,12 +53,17 @@
 @import "assets/bootstrap5/helpers";
 
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "theme/child_theme_utilities";
 @import "assets/bootstrap5/utilities/api";
 
 // 8. Add additional custom code here
 // Start bringing in colors and styles. 
+@import "assets/animate/animate";
 @import "assets/understrap/theme/colors";
 //@import "assets/understrap/theme/blocks";
+
+@import "assets/fontawesome6/fontawesome";
+@import "icomoon/icomoon.scss"; // <------- Custom Icomoon Icon font
 
 
 
@@ -67,7 +73,7 @@
 }
 
 // Matches the page title font weight.
-.editor-post-title .editor-post-title__input{
+.editor-post-title .editor-post-title__input {
 	font-size: $h1-font-size;
 	font-weight: $headings-font-weight;
 }
