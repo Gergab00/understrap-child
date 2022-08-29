@@ -3,6 +3,9 @@
  * Understrap Child Theme functions and definitions
  *
  * @package UnderstrapChild
+ * @author Gerardo Gonzalez
+ * @version 2022/08/29
+ * 
  */
 
 // Exit if accessed directly.
@@ -23,19 +26,29 @@ function understrap_remove_scripts() {
 add_action( 'wp_enqueue_scripts', 'understrap_remove_scripts', 20 );
 
 // Themes's includes directory.
-$reeferdispatch_inc_dir = 'inc/';
+$understrapchild_inc_dir = 'inc/';
 
-$reeferdispatch_includes = array(
-	'enqueue',														// Enqueue scripts and styles.
-	'safe-svg/safe-svg',											// Load save svg files
+$understrapchild_includes = array(
+	'safe-svg/safe-svg',					// Load save svg files
+	'child-theme-settings',                  // Initialize theme default settings.
+	'child-setup',                           // Theme setup and custom theme supports.
+	'child-widgets',                         // Register widget area.
+	'child-enqueue',                         // Enqueue scripts and styles.
+	'child-template-tags',                   // Custom template tags for this theme.
+	'child-pagination',                      // Custom pagination for this theme.
+	'child-hooks',                           // Custom hooks.
+	'child-extras',                          // Custom functions that act independently of the theme templates.
+	'child-customizer',                      // Customizer additions.
+	'child-custom-comments',                 // Custom Comments file.
+	'child-class-wp-bootstrap-navwalker',    // Load custom WordPress nav walker. Trying to get deeper navigation? Check out: https://github.com/understrap/understrap/issues/567.
+	'child-editor',                          // Load Editor functions.															
 	'customizer-custom-controls/customizer-custom-controls',		// Load custom-controls files
-	'customizer_theme',
 	'logo-size',
 );
 
 // Include files.
-foreach ( $reeferdispatch_includes as $file ) {
-	require_once get_theme_file_path( $reeferdispatch_inc_dir . $file . '.php' );
+foreach ( $understrapchild_includes as $file ) {
+	require_once get_theme_file_path( $understrapchild_inc_dir . $file . '.php' );
 }
 
 /**
