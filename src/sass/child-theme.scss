@@ -60,6 +60,9 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 // Optional files - If you don´t use the corresponding scripts/fonts comment em out
 @import "assets/fontawesome6/fontawesome"; // <------- Font Awesome Icon font
+@import "assets/fontawesome6/brands.scss"; // <------- Font Awesome Icon font
+@import "assets/fontawesome6/regular.scss"; // <------- Font Awesome Icon font
+@import "assets/fontawesome6/solid.scss"; // <------- Font Awesome Icon font
 @import "icomoon/icomoon.scss"; // <------- Custom Icomoon Icon font
 @import "assets/underscores"; // <------- Underscores media styles
 

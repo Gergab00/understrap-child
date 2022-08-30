@@ -62,8 +62,12 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "assets/understrap/theme/colors";
 //@import "assets/understrap/theme/blocks";
 
-@import "assets/fontawesome6/fontawesome";
-@import "icomoon/icomoon.scss"; // <------- Custom Icomoon Icon font
+@import "assets/fontawesome6/fontawesome"; // <------- Font Awesome Icon font
+@import "assets/fontawesome6/brands.scss"; // <------- Font Awesome Icon font
+@import "assets/fontawesome6/regular.scss"; // <------- Font Awesome Icon font
+@import "assets/fontawesome6/solid.scss"; // <------- Font Awesome Icon font
+//@import "icomoon/icomoon.scss"; // <------- Custom Icomoon Icon font
+@import "theme/child_theme";
 
 
 
