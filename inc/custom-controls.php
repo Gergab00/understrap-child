@@ -14,12 +14,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 */
 	class Skyrocket_Custom_Control extends WP_Customize_Control {
 		protected function get_skyrocket_resource_url() {
-			if( strpos( wp_normalize_path( __DIR__ ), wp_normalize_path( WP_PLUGIN_DIR ) ) === 0 ) {
-				// We're in a plugin directory and need to determine the url accordingly.
-				return plugin_dir_url( __DIR__ );
-			}
-
-			return trailingslashit( get_template_directory_uri() );
+			return trailingslashit( get_stylesheet_directory_uri() );
 		}
 	}
 
@@ -32,12 +27,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 */
 	class Skyrocket_Custom_Section extends WP_Customize_Section {
 		protected function get_skyrocket_resource_url() {
-			if( strpos( wp_normalize_path( __DIR__ ), wp_normalize_path( WP_PLUGIN_DIR ) ) === 0 ) {
-				// We're in a plugin directory and need to determine the url accordingly.
-				return plugin_dir_url( __DIR__ );
-			}
-
-			return trailingslashit( get_template_directory_uri() );
+			return trailingslashit( get_stylesheet_directory_uri() );
 		}
 	}
 

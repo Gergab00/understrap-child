@@ -38,11 +38,11 @@ $understrapchild_includes = array(
 	'child-pagination',                      // Custom pagination for this theme.
 	'child-hooks',                           // Custom hooks.
 	'child-extras',                          // Custom functions that act independently of the theme templates.
+	'custom-controls',						 // Load custom-controls files
 	'child-customizer',                      // Customizer additions.
 	'child-custom-comments',                 // Custom Comments file.
 	'child-class-wp-bootstrap-navwalker',    // Load custom WordPress nav walker. Trying to get deeper navigation? Check out: https://github.com/understrap/understrap/issues/567.
 	'child-editor',                          // Load Editor functions.															
-	'customizer-custom-controls/customizer-custom-controls',		// Load custom-controls files
 	'logo-size',
 );
 
