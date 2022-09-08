@@ -2,7 +2,12 @@
 @use "sass:selector";
 
 .wrapper {
-    padding: 0;
+  padding: 0;
+
+  @include media-breakpoint-down(md) {
+      position: relative;
+      overflow: hidden;
+  }
 }
 //---------------------------------------------- MIXINS ----------------------------------------------//
 @mixin unify-parent($child) {
