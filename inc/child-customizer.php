@@ -10,6 +10,9 @@
  *
  */
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
 class Child_Theme_Customizer
 {
 // Get our default values

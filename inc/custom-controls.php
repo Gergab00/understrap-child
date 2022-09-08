@@ -2,7 +2,17 @@
 /**
  * Skyrocket Customizer Custom Controls
  *
+ * Child Theme Customizer.
+ *
+ * @package UnderstrapChild
+ * @author Gerardo Gonzalez
+ * @version 2022.08.31
+ * @since 2022.07.28
+ *
  */
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 if ( class_exists( 'WP_Customize_Control' ) ) {
 	/**

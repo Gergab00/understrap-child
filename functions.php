@@ -11,8 +11,6 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-
-
 /**
  * Removes the parent themes stylesheet and scripts from inc/enqueue.php
  */
@@ -39,7 +37,9 @@ $understrapchild_includes = array(
 	'child-hooks',                           // Custom hooks.
 	'child-extras',                          // Custom functions that act independently of the theme templates.
 	'custom-controls',						 // Load custom-controls files
-	'child-customizer',                      // Customizer additions.
+	'child-customizer',                      // Customizer additions
+	'mx-metaboxes/mx-metaboxes',			 // Easy metaboxes create and set up
+	'mx-metaboxes/mx-metaboxes-examples',	 // Erase for remove the examples for the pages
 	'child-custom-comments',                 // Custom Comments file.
 	'child-class-wp-bootstrap-navwalker',    // Load custom WordPress nav walker. Trying to get deeper navigation? Check out: https://github.com/understrap/understrap/issues/567.
 	'child-editor',                          // Load Editor functions.															
