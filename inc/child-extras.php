@@ -16,6 +16,18 @@
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 
+add_action( 'after_setup_theme', 'remove_parent_filters' );
+
+/**
+ * Remove parent filters
+ *
+ * @return void
+ */
+function remove_parent_filters(){
+    remove_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );
+    remove_filter( 'excerpt_more', 'understrap_custom_excerpt_more' );
+}
+
 add_filter('the_content', 'filter_the_content');
 
 /**
