@@ -53,6 +53,7 @@ add_filter('wp_trim_excerpt', 'filter_the_excerpt');
  * @param [type] $post_exceprt
  * @return void
  * @see https://developer.wordpress.org/reference/functions/wp_trim_excerpt/
+ * @see https://developer.wordpress.org/reference/functions/wp_trim_excerpt/#hooks
  * 
  */
 function filter_the_excerpt( $post_exceprt ) 
@@ -77,4 +78,19 @@ function filter_excerpt_more ( $more )
     // Add your code here to modify the more link output.
     
     return $more;
+}
+
+add_filter('excerpt_length', 'filter_excerpt_length');
+/**
+ * Undocumented function
+ *
+ * @param [type] $length
+ * @return void
+ * @see https://developer.wordpress.org/reference/hooks/excerpt_length/
+ */
+function filter_excerpt_length( $length )
+{
+    // Add your code here to modify the length of the excerpt
+
+    return $length;
 }
