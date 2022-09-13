@@ -33,7 +33,7 @@ function filter_the_content( $content )
     return $content;
 }
 
-add_filter('wp_trim_excerpt', 'understrap_all_excerpts_get_more_link');
+add_filter('wp_trim_excerpt', 'filter_the_excerpt');
 
 /**
  * Undocumented function
@@ -48,4 +48,21 @@ function filter_the_excerpt( $post_exceprt )
     // Add your code here to modify the excerpt output.
 
     return $post_exceprt;
+}
+
+add_filter('excerpt_more', 'filter_excerpt_more');
+
+/**
+ * Undocumented function
+ *
+ * @param [type] $more
+ * @return void
+ * @see https://developer.wordpress.org/reference/hooks/excerpt_more/
+ * 
+ */
+function filter_excerpt_more ( $more ) 
+{
+    // Add your code here to modify the more link output.
+    
+    return $more;
 }
