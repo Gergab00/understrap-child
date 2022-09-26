@@ -51,6 +51,9 @@ foreach ( $understrapchild_includes as $file ) {
 	require_once get_theme_file_path( $understrapchild_inc_dir . $file . '.php' );
 }
 
+// Blocks files.
+require_once get_theme_file_path('blocks/blocks.php');
+
 /**
  * Load the child theme's text domain
  */
