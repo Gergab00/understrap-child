@@ -1101,6 +1101,30 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	}
 
 	/**
+	 * Mail sanitization
+	 *
+	 * @param  string	Input to be sanitized (either a string containing a single url or multiple, separated by commas)
+	 * @return string	Sanitized input
+	 */
+	if ( ! function_exists( 'skyrocket_mail_sanitization' ) ) {
+		function skyrocket_mail_sanitization( $input ) {
+			if ( strpos( $input, ',' ) !== false) {
+				$input = explode( ',', $input );
+			}
+			if ( is_array( $input ) ) {
+				foreach ($input as $key => $value) {
+					$input[$key] = sanitize_email( $value );
+				}
+				$input = implode( ',', $input );
+			}
+			else {
+				$input = sanitize_email( $input );
+			}
+			return $input;
+		}
+	}
+
+	/**
 	 * Switch sanitization
 	 *
 	 * @param  string		Switch value
