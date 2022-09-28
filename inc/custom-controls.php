@@ -373,6 +373,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 			$this->button_labels = wp_parse_args( $this->button_labels,
 				array(
 					'add' => __( 'Add', 'skyrocket' ),
+					'placeholder' => __( 'https://', 'skyrocket' ),
 				)
 			);
 		}
@@ -398,7 +399,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 				<input type="hidden" id="<?php echo esc_attr( $this->id ); ?>" name="<?php echo esc_attr( $this->id ); ?>" value="<?php echo esc_attr( $this->value() ); ?>" class="customize-control-sortable-repeater" <?php $this->link(); ?> />
 				<div class="sortable_repeater sortable">
 					<div class="repeater">
-						<input type="text" value="" class="repeater-input" placeholder="https://" /><span class="dashicons dashicons-sort"></span><a class="customize-control-sortable-repeater-delete" href="#"><span class="dashicons dashicons-no-alt"></span></a>
+						<input type="text" value="" class="repeater-input" placeholder="<?php echo $this->button_labels['placeholder']; ?>" /><span class="dashicons dashicons-sort"></span><a class="customize-control-sortable-repeater-delete" href="#"><span class="dashicons dashicons-no-alt"></span></a>
 					</div>
 				</div>
 				<button class="button customize-control-sortable-repeater-add" type="button"><?php echo $this->button_labels['add']; ?></button>

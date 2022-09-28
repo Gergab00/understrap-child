@@ -216,6 +216,7 @@ class Child_Theme_Customizer
 				'section' => 'sample_custom_controls_section',
 				'button_labels' => array(
 					'add' => __( 'Add Row', 'skyrocket' ),
+					'placeholder' => __( 'https://', 'skyrocket' ),
 				)
 			)
 		) );
