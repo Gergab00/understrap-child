@@ -56,7 +56,7 @@ jQuery( document ).ready(function($) {
 	// Add new item
 	$('.customize-control-sortable-repeater-add').click(function(event) {
 		event.preventDefault();
-		skyrocketAppendRow($(this).parent());
+		skyrocketAppendRow($(this).parent(), '', $('.repeater-input').last().attr('placeholder'));
 		skyrocketGetAllInputs($(this).parent());
 	});
 
@@ -69,15 +69,17 @@ jQuery( document ).ready(function($) {
 	$('.sortable_repeater.sortable').on('blur', '.repeater-input', function() {
 		var url = $(this);
 		var val = url.val();
-		if(val && !val.match(/^.+:\/\/.*/)) {
-			// Important! Make sure to trigger change event so Customizer knows it has to save the field
-			url.val('https://' + val).trigger('change');
+		if(!val.includes("@")){
+			if( val && !val.match(/^.+:\/\/.*/)) {
+				// Important! Make sure to trigger change event so Customizer knows it has to save the field
+				url.val('https://' + val).trigger('change');
+			}
 		}
 	});
 
 	// Append a new row to our list of elements
-	function skyrocketAppendRow($element, defaultValue = '') {
-		var newRow = '<div class="repeater" style="display:none"><input type="text" value="' + defaultValue + '" class="repeater-input" placeholder="https://" /><span class="dashicons dashicons-sort"></span><a class="customize-control-sortable-repeater-delete" href="#"><span class="dashicons dashicons-no-alt"></span></a></div>';
+	function skyrocketAppendRow($element, defaultValue = '', placeholder = 'https://') {
+		var newRow = '<div class="repeater" style="display:none"><input type="text" value="' + defaultValue + '" class="repeater-input" placeholder="' + placeholder + '" /><span class="dashicons dashicons-sort"></span><a class="customize-control-sortable-repeater-delete" href="#"><span class="dashicons dashicons-no-alt"></span></a></div>';
 
 		$element.find('.sortable').append(newRow);
 		$element.find('.sortable').find('.repeater:last').slideDown('slow', function(){
