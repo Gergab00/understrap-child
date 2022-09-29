@@ -67,6 +67,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "assets/underscores"; // <------- Underscores media styles
 
 // Any additional imported files //
+@import "theme/child_theme_mixins"; //<------------------- Necessary and useful mixins for the theme
 @import "theme/child_theme"; // <------- Add your styles into this fil
 @import "assets/animate/animate";
 @import "assets/understrap/theme/colors"; // <-------- This creates the necessary bootstrap color classes.

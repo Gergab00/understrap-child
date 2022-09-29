@@ -9,13 +9,6 @@
       overflow: hidden;
   }
 }
-//---------------------------------------------- MIXINS ----------------------------------------------//
-@mixin unify-parent($child) {
-    @at-root #{selector.unify(&, $child)} {
-      @content;
-    }
-  }
-//---------------------------------------------- MIXINS (END) ----------------------------------------//
 //---------------------------------------------- FONT STYLES ----------------------------------------------//
 // Font Size 
 //Maybe you can use this styles ot maybe you want to modifu the bootstrap values
