@@ -22,95 +22,15 @@ $enable-gradients: true;
 $enable-negative-margins: true;
 
 //
-$spacer: 1rem;
+
 $spacers: (
-    0: 0,
-    4: $spacer * .25,
-    8: $spacer * .5,
-    12: $spacer * .75,
-    16: $spacer,
-    20: $spacer * 1.25,
-    24: $spacer * 1.5,
-    32: $spacer * 2,
-    40: $spacer * 2.5,
-    44: $spacer * 2.75,
-    48: $spacer * 3,
-    60: $spacer * 3.75,
-    64: $spacer * 4,
-    72: $spacer * 4.5,
-    80: $spacer * 5,
-    88: $spacer * 5.5,
-    96: $spacer * 6,
-    102: $spacer * 6.375,
-    108: $spacer * 6.75,
-    144: $spacer * 9,
-    176: $spacer * 11,
-    192: $spacer * 12,
-    200: $spacer * 12.5,
-    208: $spacer * 13,
-    220: $spacer * 13.75,
-    224: $spacer * 14,
-    240: $spacer * 16,
-    272: $spacer * 17,
-    288: $spacer * 18,
-    416: $spacer * 26,
-    640: $spacer * 40,
-    );
+);
 // scss-docs-end spacer-variables-maps
 
 // Position
-
 // scss-docs-start position-map
 $position-values: (
-    0: 0,
-    n3: -3%,
-    n4: -4%,
-    n5: -5%,
-    n7: -7%,
-    n10: -10%,
-    n15: -15%,
-    n20: -20%,
-    n25: -25%,
-    n30: -30%,
-    n35: -35%,
-    n40: -40%,
-    n45: -45%,
-    n50: -50%,
-    n55: -55%,
-    n60: -60%,
-    n65: -65%,
-    n70: -70%,
-    n75: -75%,
-    n80: -80%,
-    n85: -85%,
-    n90: -90%,
-    n95: -95%,
-    n100: -100%,
-    n125: -125%,
-    n150: -150%,
-    3: 3%,
-    4: 4%,
-    5: 5%,
-    10: 10%,
-    15: 15%,
-    20: 20%,
-    25: 25%,
-    30: 30%,
-    35: 35%,
-    45: 45%,
-    50: 50%,
-    55: 55%,
-    60: 60%,
-    65: 65%,
-    70: 70%,
-    75: 75%,
-    80: 80%,
-    85: 85%,
-    90: 90%,
-    95: 95%,
-    100: 100%,
-    125: 125%,
-    150: 150%,);
+);
 
 // scss-docs-start grid-breakpoints
 $grid-breakpoints: (
@@ -121,6 +41,14 @@ $grid-breakpoints: (
     slg: 1024px,
     lg: 1282px,
     xl: 1368px,
-    xxl: 1442px);
-
+    xxl: 1442px
+);
+//Register your fonts and add them to the following map 
+//to create the bootstrap classes
 $font-path : "../fonts";
+$fonts-family: (
+    monospace: var(--#{$prefix}font-monospace)
+);
+$font-sizes: (
+    12: 12px,
+);

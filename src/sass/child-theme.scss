@@ -1,5 +1,6 @@
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc) // <------- Loads Bootstrap5
 @import "assets/bootstrap5/functions";
+@import "theme/child_theme_functions"; // Load your custom functions
 
 // 2. Include any default variable overrides here
 // ! @see https: //getbootstrap.com/docs/5.2/customize/sass/#importing
@@ -10,6 +11,7 @@
 
 // 4. Include any default map overrides here
 $theme-colors: map-merge($theme-colors, $custom-colors);
+//$theme-colors: $custom-colors;
 
 // 5. Include remainder of required parts
 @import "assets/bootstrap5/maps";
@@ -55,21 +57,14 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "assets/bootstrap5/utilities/api";
 
 // 8. Add additional custom code here
-@import "assets/understrap/theme/understrap"; // <------- Loads the Understrap defaults. Just a few classes to incorporate BS in WP
-//@import "assets/understrap/theme/woocommerce";           // <------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
-
 // Optional files - If you don´t use the corresponding scripts/fonts comment em out
 @import "assets/fontawesome6/fontawesome"; // <------- Font Awesome Icon font
 @import "assets/fontawesome6/brands.scss"; // <------- Font Awesome Icon font
 @import "assets/fontawesome6/regular.scss"; // <------- Font Awesome Icon font
 @import "assets/fontawesome6/solid.scss"; // <------- Font Awesome Icon font
 @import "icomoon/icomoon.scss"; // <------- Custom Icomoon Icon font
-@import "assets/underscores"; // <------- Underscores media styles
 
 // Any additional imported files //
 @import "theme/child_theme_mixins"; //<------------------- Necessary and useful mixins for the theme
 @import "theme/child_theme"; // <------- Add your styles into this fil
-@import "assets/animate/animate";
-@import "assets/understrap/theme/colors"; // <-------- This creates the necessary bootstrap color classes.
-//@import "assets/understrap/theme/blocks";           // <-------- This adds Bootstrap styles to blocks.
-//@import "assets/understrap/theme/contact-form7";    // <-------- Contact Form 7 - Bootstrap 4 support
+//@import "assets/animate/animate";

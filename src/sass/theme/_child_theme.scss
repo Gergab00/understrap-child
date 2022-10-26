@@ -9,6 +9,10 @@
       overflow: hidden;
   }
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
 //---------------------------------------------- FONT STYLES ----------------------------------------------//
 // Font Size 
 //Maybe you can use this styles ot maybe you want to modifu the bootstrap values
