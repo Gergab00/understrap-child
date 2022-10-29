@@ -1,5 +1,5 @@
 /*
- Theme Name:   Understrap Child
+ Theme Name:   Understrap Framework Theme
  Theme URI:    https://understrap.com
  Description:  Understrap Child Theme
  Author:       the Understrap Contributors
@@ -11,4 +11,20 @@
  Text Domain:  understrap-child
  Tags: one-column, custom-menu, featured-images, theme-options, translation-ready, bootstrap, font awesome, animate, custom-comtrols, flickity, custom-metaboxes
  GitHub Theme URI: understrap/understrap-child
+ Requires at least: 5.0
+ Tested up to: 5.8.1
+ Requires PHP: 5.2
+
+ Understrap WordPress Theme, (C) 2021 Howard Development & Consulting, LLC
+ Understrap Framework Theme is distributed under the terms of the GNU GPL.
+
+ Resource Licenses:
+ Understrap Framework Theme is based on Understrap https://understrap.com/ © 2022 Howard Development & Consulting, LLC
+ Understrap is based on Underscores https://underscores.me/, (C) Automattic, Inc.
+ Font Awesome: https://fontawesome.com/v6.0/license/ (Font: SIL OFL 1.1, (S)CSS: MIT)
+ Bootstrap: https://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (MIT)
+ WP Bootstrap Navwalker by Edward McIntyre & William Patton: https://github.com/twittem/wp-bootstrap-navwalker (GNU GPLv3)
+ Flickity by Touch, responsive, flickable carousels By Metafizzy 🌈🐻: https://flickity.metafizzy.co/license.html
+ Animate.css - Just-add-water CSS animations by Daniel Eden: https://github.com/animate-css/animate.css/blob/main/LICENSE
 */
+
