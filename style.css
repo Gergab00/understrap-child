@@ -1,21 +1,22 @@
 /*
  Theme Name:   Understrap Framework Theme
- Theme URI:    https://understrap.com
- Description:  Understrap Child Theme
+ Theme URI:    https:&#x2F;&#x2F;github.com&#x2F;Gergab00&#x2F;understrap-framework-theme
+ Description:  The Understrap Framework Theme is a child theme of Understrap, it is inspired by the Antonella Framework to ease the workflow for developers, helping to create the necessary files for the creation of awesome themes.
  Author:       the Understrap Contributors
- Author URI:   https://github.com/understrap/understrap-child/graphs/contributors
+ Author URI:   https:&#x2F;&#x2F;github.com&#x2F;understrap&#x2F;understrap-child&#x2F;graphs&#x2F;contributors
  Template:     understrap
- Version:      1.1.0
+ Version:      0.9.0
  License: GNU General Public License v2 or later
  License URI: http://www.gnu.org/licenses/gpl-2.0.html
- Text Domain:  understrap-child
+ Text Domain:  understrap-framework-theme
  Tags: one-column, custom-menu, featured-images, theme-options, translation-ready, bootstrap, font awesome, animate, custom-comtrols, flickity, custom-metaboxes
- GitHub Theme URI: understrap/understrap-child
+ GitHub Theme URI: https:&#x2F;&#x2F;github.com&#x2F;Gergab00&#x2F;understrap-framework-theme.git
+
  Requires at least: 5.0
  Tested up to: 5.8.1
  Requires PHP: 5.2
 
- Understrap WordPress Theme, (C) 2021 Howard Development & Consulting, LLC
+ Understrap WordPress Theme, Gerardo Gabriel Gonzalez Velazquez
  Understrap Framework Theme is distributed under the terms of the GNU GPL.
 
  Resource Licenses:
@@ -27,4 +28,3 @@
  Flickity by Touch, responsive, flickable carousels By Metafizzy 🌈🐻: https://flickity.metafizzy.co/license.html
  Animate.css - Just-add-water CSS animations by Daniel Eden: https://github.com/animate-css/animate.css/blob/main/LICENSE
 */
-
