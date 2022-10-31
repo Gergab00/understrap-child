@@ -23,8 +23,7 @@ $enable-negative-margins: true;
 
 //
 
-$spacers: (
-);
+$spacers: get-sizes();
 // scss-docs-end spacer-variables-maps
 
 // Position
@@ -47,7 +46,7 @@ $grid-breakpoints: (
 //to create the bootstrap classes
 $font-path : "../fonts";
 $fonts-family: (
-    monospace: var(--#{$prefix}font-monospace)
+    monospace: monospace,
 );
 $font-sizes: (
     12: 12px,

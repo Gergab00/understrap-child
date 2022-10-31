@@ -62,7 +62,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "assets/fontawesome6/brands.scss"; // <------- Font Awesome Icon font
 @import "assets/fontawesome6/regular.scss"; // <------- Font Awesome Icon font
 @import "assets/fontawesome6/solid.scss"; // <------- Font Awesome Icon font
-@import "icomoon/icomoon.scss"; // <------- Custom Icomoon Icon font
+//@import "icomoon/icomoon.scss"; // <------- Custom Icomoon Icon font
 
 // Any additional imported files //
 @import "theme/child_theme_mixins"; //<------------------- Necessary and useful mixins for the theme
