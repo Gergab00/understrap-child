@@ -69,7 +69,7 @@ jQuery( document ).ready(function($) {
 	$('.sortable_repeater.sortable').on('blur', '.repeater-input', function() {
 		var url = $(this);
 		var val = url.val();
-		if(!val.includes("@")){
+		if(val.includes("https://")){
 			if( val && !val.match(/^.+:\/\/.*/)) {
 				// Important! Make sure to trigger change event so Customizer knows it has to save the field
 				url.val('https://' + val).trigger('change');
@@ -78,7 +78,7 @@ jQuery( document ).ready(function($) {
 	});
 
 	// Append a new row to our list of elements
-	function skyrocketAppendRow($element, defaultValue = '', placeholder = 'https://') {
+	function skyrocketAppendRow($element, defaultValue = '', placeholder = '') {
 		var newRow = '<div class="repeater" style="display:none"><input type="text" value="' + defaultValue + '" class="repeater-input" placeholder="' + placeholder + '" /><span class="dashicons dashicons-sort"></span><a class="customize-control-sortable-repeater-delete" href="#"><span class="dashicons dashicons-no-alt"></span></a></div>';
 
 		$element.find('.sortable').append(newRow);
