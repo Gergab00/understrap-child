@@ -22,9 +22,50 @@ $enable-gradients: true;
 $enable-negative-margins: true;
 
 //
+$spacer: 1rem;
 $spacers: (
+    auto:auto,
+    try: $spacer * 1,
 );
-// scss-docs-end spacer-variables-maps
+    
+$n: 0;
+$m: 0;
+@while $n <=500 {
+    $spacers: map.set($spacers, $n, $spacer * $m);
+    $n: $n +2;
+    $m: $m +.125;
+}
+
+$n: 0;
+$m: 0;
+
+$spacer-vw: 1vw;
+$spacer-vw: (
+    auto:auto,
+    try: $spacer * 1,
+);
+
+@while $n <=1000 {
+    $spacers-vw: map.set($spacers-vw, $n, $spacer-vw * $m);
+    $n: $n +1;
+    $m: $m +.1;
+}
+
+$sizing: 1%;
+$sizings: (
+    auto:auto,
+    try: $sizing * 1,
+);
+
+$n: 0;
+$m: 0;
+
+@while $n <=100 {
+    $sizings: map.set($sizings, $n, $sizing * $m);
+    $n: $n +1;
+    $m: $m +1;
+}
+
 
 // Position
 // scss-docs-start position-map
@@ -44,7 +85,6 @@ $grid-breakpoints: (
 );
 //Register your fonts and add them to the following map 
 //to create the bootstrap classes
-$font-path : "../fonts";
 $fonts-family: (
     monospace: monospace,
 );
