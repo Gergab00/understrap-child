@@ -3,83 +3,233 @@
 
 ///Description Fonts
 /// @see https://getbootstrap.com/docs/5.2/utilities/text/#utilities-api
-$utilities: map-merge($utilities,
-        ("font-family": (property: font-family,
-                class: font,
-                values: ($fonts-family)),
-            "font-size": (rfs: true,
-                property: font-size,
-                responsive: true,
-                class: fs,
-                values: $font-sizes ),
-            "line-height": (property: line-height,
-                responsive: true,
-                class: lh,
-                values: map-merge($line-heights, map-get(map-get($utilities, "line-height"), "values"))),
-        ),
-    );
+$utilities: map-merge(
+	$utilities,
+	(
+		"font-family": (
+			property: font-family,
+			class: font,
+			values: (
+				$fonts-family,
+			),
+		),
+		"font-size": (
+			rfs: true,
+			property: font-size,
+			responsive: true,
+			class: fs,
+			values: $font-sizes,
+		),
+		"line-height": (
+			property: line-height,
+			responsive: true,
+			class: lh,
+			values:
+				map-merge(
+					$line-heights,
+					map-get(map-get($utilities, "line-height"), "values")
+				),
+		),
+	)
+);
 
 /// Description Margin and Padding
 ///@see https://getbootstrap.com/docs/5.2/utilities/spacing/#utilities-api
-$utilities: map-merge($utilities,
-        ("margin-x": map-merge(map-get($utilities, "margin-x"),
-                (values: map-merge($spacers-vw, map-get(map-get($utilities, "margin-x"), "values"))),
-            ),
-            "margin-start": map-merge(map-get($utilities, "margin-start"),
-                (values: map-merge($spacers-vw, map-get(map-get($utilities, "margin-start"), "values"))),
-            ),
-            "margin-end": map-merge(map-get($utilities, "margin-end"),
-                (values: map-merge($spacers-vw, map-get(map-get($utilities, "margin-end"), "values"))),
-            ),
-            "padding-x": map-merge(map-get($utilities, "padding-x"),
-                (values: map-merge($spacers-vw, map-get(map-get($utilities, "padding-x"), "values"))),
-            ),
-            "padding-end": map-merge(map-get($utilities, "padding-end"),
-                (values: map-merge($spacers-vw, map-get(map-get($utilities, "padding-end"), "values"))),
-            ),
-            "padding-start": map-merge(map-get($utilities, "padding-start"),
-                (values: map-merge($spacers-vw, map-get(map-get($utilities, "padding-start"), "values"))),
-            ),
-        ));
+$utilities: map-merge(
+	$utilities,
+	(
+		"margin-x":
+			map-merge(
+				map-get($utilities, "margin-x"),
+				(
+					values:
+						map-merge(
+							$spacers-vw,
+							map-get(map-get($utilities, "margin-x"), "values")
+						),
+				)
+			),
+		"margin-start":
+			map-merge(
+				map-get($utilities, "margin-start"),
+				(
+					values:
+						map-merge(
+							$spacers-vw,
+							map-get(map-get($utilities, "margin-start"), "values")
+						),
+				)
+			),
+		"margin-end":
+			map-merge(
+				map-get($utilities, "margin-end"),
+				(
+					values:
+						map-merge(
+							$spacers-vw,
+							map-get(map-get($utilities, "margin-end"), "values")
+						),
+				)
+			),
+		"padding-x":
+			map-merge(
+				map-get($utilities, "padding-x"),
+				(
+					values:
+						map-merge(
+							$spacers-vw,
+							map-get(map-get($utilities, "padding-x"), "values")
+						),
+				)
+			),
+		"padding-end":
+			map-merge(
+				map-get($utilities, "padding-end"),
+				(
+					values:
+						map-merge(
+							$spacers-vw,
+							map-get(map-get($utilities, "padding-end"), "values")
+						),
+				)
+			),
+		"padding-start":
+			map-merge(
+				map-get($utilities, "padding-start"),
+				(
+					values:
+						map-merge(
+							$spacers-vw,
+							map-get(map-get($utilities, "padding-start"), "values")
+						),
+				)
+			),
+	)
+);
 
 /// Description Position
 /// @see https://getbootstrap.com/docs/5.2/utilities/position/#utilities-api
-$utilities: map-merge($utilities,
-        ("top": (property: top,
-                responsive: true,
-                values: map-merge($position-values, map-get(map-get($utilities, "top"), "values"))),
-            "bottom": (property: bottom,
-                responsive: true,
-                values: map-merge($position-values, map-get(map-get($utilities, "bottom"), "values"))),
-            "start": (property: left,
-                responsive: true,
-                class: start,
-                values: map-merge($position-values, map-get(map-get($utilities, "start"), "values"))),
-            "end": (property: right,
-                responsive: true,
-                class: end,
-                values: map-merge($position-values, map-get(map-get($utilities, "end"), "values")))
-                )
-            );
+$utilities: map-merge(
+	$utilities,
+	(
+		"top": (
+			property: top,
+			responsive: true,
+			values:
+				map-merge(
+					$position-values,
+					map-get(map-get($utilities, "top"), "values")
+				),
+		),
+		"bottom": (
+			property: bottom,
+			responsive: true,
+			values:
+				map-merge(
+					$position-values,
+					map-get(map-get($utilities, "bottom"), "values")
+				),
+		),
+		"start": (
+			property: left,
+			responsive: true,
+			class: start,
+			values:
+				map-merge(
+					$position-values,
+					map-get(map-get($utilities, "start"), "values")
+				),
+		),
+		"end": (
+			property: right,
+			responsive: true,
+			class: end,
+			values:
+				map-merge(
+					$position-values,
+					map-get(map-get($utilities, "end"), "values")
+				),
+		),
+	)
+);
 
 ///Description Sizing
 /// @see https://getbootstrap.com/docs/5.2/utilities/sizing/#utilities-api
-$utilities: map-merge($utilities,
-        ("width": (property: width,
-                class: w,
-                responsive: true,
-                values: $sizings ),
-            "height": (property: height,
-                class: h,
-                responsive: true,
-                values: $sizings ),
-            "viewport-width": (property: width,
-            responsive: true,
-                class: vw,
-                values: $sizings-vw), 
-            "viewport-height": (property: height,
-            responsive: true,
-                class: vh,
-                values: $sizings-vh)
-            )
-        );
+$utilities: map-merge(
+	$utilities,
+	(
+		"width": (
+			property: width,
+			class: w,
+			responsive: true,
+			values: $sizings,
+		),
+		"max-width": (
+			property: max-width,
+			class: mw,
+			responsive: true,
+			values: $max-width,
+		),
+		"viewport-width": (
+			property: width,
+			responsive: true,
+			class: vw,
+			values: $sizings-vw,
+		),
+		"height": (
+			property: height,
+			class: h,
+			responsive: true,
+			values: $sizings,
+		),
+		"max-height": (
+			property: max-height,
+			class: mh,
+			values: $max-width,
+		),
+		"viewport-height": (
+			property: height,
+			responsive: true,
+			class: vh,
+			values: $sizings-vh,
+		),
+	)
+);
+
+///Description Add utilities
+/// @see https://getbootstrap.com/docs/5.2/utilities/api/#add-utilities
+$utilities: map-merge(
+	$utilities,
+	(
+		"backdrop-filter": (
+			property: backdrop-filter,
+			class: filter,
+			values: (
+				blur-10: blur(10px),
+			),
+		),
+		"shadow": (
+			property: box-shadow,
+			class: shadow,
+			values: (
+				left-offcanvas: inset 0px 0px 50px rgba(18, 17, 39, 0.5),
+				right-offcanvas: inset -50px 0px 50px 0px rgba(18, 17, 39, 0.5),
+				none: none,
+			),
+		),
+		"background-size": (
+			property: background-size,
+			class: bgs,
+			values: (
+				24: 1.5rem,
+			),
+		),
+		"skew-x": (
+			property: transform,
+			class: skew-x,
+			values: (
+				330: skewX(330deg),
+			),
+		),
+	)
+);
