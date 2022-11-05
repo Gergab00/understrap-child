@@ -22,9 +22,14 @@ class Child_Theme_Customizer
     {
         // Register our Panels
         add_action('customize_register', array($this, 'skyrocket_add_customizer_panels'));
+        add_action('customize_register', array($this, 'childtheme_add_customizer_panels'));
 
 		// Register our sections
 		add_action( 'customize_register', array( $this, 'skyrocket_add_customizer_sections' ) );
+		add_action( 'customize_register', array( $this, 'childtheme_add_customizer_sections' ) );
+		
+		// Register your custom controls
+		add_action( 'customize_register', array( $this, 'childtheme_register_custom_controls' ) );
 
 		// Register our sample Custom Control controls
 		add_action( 'customize_register', array( $this, 'skyrocket_register_sample_custom_controls' ) );
@@ -104,6 +109,11 @@ class Child_Theme_Customizer
         );
     }
 
+	public function childtheme_add_customizer_panels( $wp_customize )
+	{
+
+	}
+
 	/**
 	 * Register the Customizer sections
 	 */
@@ -140,6 +150,20 @@ class Child_Theme_Customizer
 			)
 		);
 	}
+
+	public function childtheme_add_customizer_sections( $wp_customize )
+	{
+
+	}
+
+	/**
+	 * Register our custom controls
+	 */
+	public function childtheme_register_custom_controls( $wp_customize )
+	{
+
+	}
+
 
 	/**
 	 * Register our sample custom controls
