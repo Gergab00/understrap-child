@@ -21,15 +21,103 @@ $enable-shadows: true;
 $enable-gradients: true;
 $enable-negative-margins: true;
 
-//
-$spacers: (
+$spacer-vw: 1vw;
+$spacers-vw: (
+    auto:auto,
+    try: $spacer-vw * 1,
 );
-// scss-docs-end spacer-variables-maps
 
+$n: 0;
+$m: 0;
+
+/// @todo change the number 0 to the limit that you want to incresa the values
+@while $n <=0 {
+    $spacers-vw: map.set($spacers-vw, $n, $spacer-vw * $m);
+    $n: $n +1;
+    $m: $m +.1;
+} 
+
+$spacer: 1rem;
+$spacers: (
+    auto:auto,
+    try: $spacer * 1,
+);
+
+$n: 0;
+$m: 0;
+
+/// @todo change the number 0 to the limit that you want to incresa the values
+@while $n <=0 {
+    $spacers: map.set($spacers, $n, $spacer * $m);
+    $n: $n +2;
+    $m: $m +.125;
+}
+
+$sizing: 1%;
+$sizings: (
+    auto:auto,
+    try: $sizing * 1,
+);
+
+$n: 0;
+$m: 0;
+
+/// @todo change the number 0 to the limit that you want to incresa the values
+@while $n <=0 {
+    $sizings: map.set($sizings, $n, $sizing * $m);
+    $n: $n +1;
+    $m: $m +1;
+}
+
+$sizing-vw: 1vw;
+$sizings-vw: (
+    100: $sizing-vw * 100,
+    try: $sizing-vw * 1,
+);
+
+$n: 0;
+$m: 0;
+
+/// @todo change the number 0 to the limit that you want to incresa the values
+@while $n <=0 {
+    $sizings-vw: map.set($sizings-vw, $n, $sizing-vw * $m);
+    $n: $n +1;
+    $m: $m +1;
+}
+
+$sizing-vh: 1vh;
+$sizings-vh: (
+    100: $sizing-vh * 100,
+    try: $sizing-vh * 1,
+);
+
+$n: 0;
+$m: 0;
+
+/// @todo change the number 0 to the limit that you want to incresa the values
+@while $n <=0 {
+    $sizings-vh: map.set($sizings-vh, $n, $sizing-vh * $m);
+    $n: $n +1;
+    $m: $m +1;
+}
+
+// scss-docs-end spacer-variables-maps
 // Position
 // scss-docs-start position-map
+$position: 1%;
 $position-values: (
+    try: $position * 1
 );
+
+$n: 0;
+$m: 0;
+
+/// @todo change the number 0 to the limit that you want to incresa the values
+@while $n <=0 {
+    $position-values: map.set($position-values, $n, $position * $m);
+    $n: $n +1;
+    $m: $m +1;
+}
 
 // scss-docs-start grid-breakpoints
 $grid-breakpoints: (
@@ -42,12 +130,17 @@ $grid-breakpoints: (
     xl: 1368px,
     xxl: 1442px
 );
+
 //Register your fonts and add them to the following map 
 //to create the bootstrap classes
-$font-path : "../fonts";
 $fonts-family: (
     monospace: monospace,
 );
+
 $font-sizes: (
-    12: 12px,
+    16: 1rem,
+);
+
+$line-heights: (
+    16: 1rem,
 );
