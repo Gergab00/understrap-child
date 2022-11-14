@@ -1,7 +1,7 @@
 {
   "name": "Understrap Framework Theme",
-  "version": "0.9.0",
-  "description": "The Understrap Framework Theme is a child theme of Understrap, it is inspired by the Antonella Framework to ease the workflow for developers, helping to create the necessary files for the creation of awesome themes.",
+  "version": "1.1.0",
+  "description": "Understrap child theme, modified to create a framework and develop child themes based on Understrap, with tools that help better ordering.",
   "main": "index.js",
   "scripts": {
     "bs": "browser-sync start --config src/build/browser-sync.config.js",
@@ -49,15 +49,15 @@
   "bugs": {
     "url": "https://github.com/Gergab00/understrap-framework-theme.git/issues"
   },
-  "homepage": "https://github.com/Gergab00/understrap-framework-theme",
+  "homepage": "https://understrap.com",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.1.1",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.2.0-beta1",
-    "create-understrap-backbone": "^0.9.1",
     "flickity": "^3.0.0",
     "flickity-as-nav-for": "^3.0.0",
-    "hover.css": "^2.3.2"
+    "hover.css": "^2.3.2",
+    "create-understrap-backbone": "^0.9.4"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",

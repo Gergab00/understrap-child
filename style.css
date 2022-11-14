@@ -1,20 +1,20 @@
 /*
  Theme Name:   Understrap Framework Theme
- Theme URI:    https:&#x2F;&#x2F;github.com&#x2F;Gergab00&#x2F;understrap-framework-theme
- Description:  The Understrap Framework Theme is a child theme of Understrap, it is inspired by the Antonella Framework to ease the workflow for developers, helping to create the necessary files for the creation of awesome themes.
+ Theme URI:    https://understrap.com
+ Description:  Understrap child theme, modified to create a framework and develop child themes based on Understrap, with tools that help better ordering.
  Author:       the Understrap Contributors
- Author URI:   https:&#x2F;&#x2F;github.com&#x2F;understrap&#x2F;understrap-child&#x2F;graphs&#x2F;contributors
+ Author URI:   https://github.com/Gergab00/understrap-framework-theme/graphs/contributors
  Template:     understrap
- Version:      0.9.0
+ Version:      1.1.0
  License: GNU General Public License v2 or later
  License URI: http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  understrap-framework-theme
  Tags: one-column, custom-menu, featured-images, theme-options, translation-ready, bootstrap, font awesome, animate, custom-comtrols, flickity, custom-metaboxes
- GitHub Theme URI: https:&#x2F;&#x2F;github.com&#x2F;Gergab00&#x2F;understrap-framework-theme.git
+ GitHub Theme URI: https://github.com/Gergab00/understrap-framework-theme.git
 
- Requires at least: 5.0
- Tested up to: 5.8.1
- Requires PHP: 5.2
+ Requires at least: 6.1
+ Tested up to: 6.1
+ Requires PHP: 7.4.26
 
  Understrap WordPress Theme, Gerardo Gabriel Gonzalez Velazquez
  Understrap Framework Theme is distributed under the terms of the GNU GPL.
