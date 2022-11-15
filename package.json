@@ -1,5 +1,5 @@
 {
-  "name": "Understrap Framework Theme",
+  "name": "understrap-framework-theme",
   "version": "1.1.0",
   "description": "Understrap child theme, modified to create a framework and develop child themes based on Understrap, with tools that help better ordering.",
   "main": "index.js",
@@ -21,13 +21,13 @@
     "dist-build": "node src/build/dist-build.js",
     "dist-clean": "node src/build/dist-clean.js",
     "compile": "npm-run-all css js",
-    "build": "wp-scripts build --webpack-copy-php",
+    "build": "wp-scripts build --webpack-copy-php --output-path=blocks/build --webpack-src-dir=blocks/src",
     "format": "wp-scripts format",
     "lint:css": "wp-scripts lint-style",
     "lint:js": "wp-scripts lint-js",
     "packages-update": "wp-scripts packages-update",
     "plugin-zip": "wp-scripts plugin-zip",
-    "start": "wp-scripts start --webpack-copy-php",
+    "start": "wp-scripts start --webpack-copy-php --output-path=blocks/build --webpack-src-dir=blocks/src",
     "config": "node ./node_modules/create-understrap-backbone/index.js"
   },
   "engines": {
@@ -56,8 +56,7 @@
     "bootstrap": "^5.2.0-beta1",
     "flickity": "^3.0.0",
     "flickity-as-nav-for": "^3.0.0",
-    "hover.css": "^2.3.2",
-    "create-understrap-backbone": "^0.9.4"
+    "hover.css": "^2.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
